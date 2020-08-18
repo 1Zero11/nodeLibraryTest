@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  form(method='POST' action='/catalog/send')
+            div.form-group
+              label(for='name') Name:
+              input#name.form-control(type='text', placeholder='First and last' name='Name')
+            div.form-group
+              label(for='reason') Reason:
+              input#reason.form-control(type='text', placeholder='Reason' name='Reason')
+            div.form-group
+              label(for='cost') Cost:
+              input#cost.form-control(type='number', placeholder='cost' name='cost')
+            button.btn.btn-primary(type='submit') Send
